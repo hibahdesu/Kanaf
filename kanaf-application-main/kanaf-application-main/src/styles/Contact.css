@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #80bfac; 
+    --secondary-color: #004245;   
+    --white-color: #FFFFFF;  
+    --shadow: rgba(0, 66, 69, 0.2);     
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; 
+    justify-content: center;
+    margin: 4rem auto; /* Center the layout */
+    background-image: url('../../public/images/contact.png'); /* Ensure the path is correct */
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; /* Ensure content does not overflow */
+    padding: 2rem; /* Add padding for better spacing */
+}
+
+.contact-container {
+    text-align: center;
+    padding: 2rem; /* Padding around the container */
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    margin: 4rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 6px 20px var(--shadow); /* Shadow for depth */
+}
+
+.contact-form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Column layout */
+    gap: 1rem; /* Space between form elements */
+    margin-top: 1rem; /* Space above the form */
+}
+
+.contact-form label {
+    font-weight: bold; /* Bold font */
+    color: var(--secondary-color); /* Text color */
+    font-size: 1.2rem; /* Font size */
+    text-align: end; /* Align text to the end */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: .6rem; /* Increased padding for better touch targets */
+    border: 1px solid var(--primary-color); /* Border color */
+    border-radius: 1rem; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+    text-align: end; /* Align text to the end */
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: var(--primary-color); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-form textarea {
+    height: 100px; /* Set height for the textarea */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column; /* Stack elements on smaller screens */
+        height: auto; /* Adjust height to fit content */
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .contact-container {
+        padding: 1rem; /* Reduce padding on smaller screens */
+        margin: 2rem; /* Adjust margin for smaller screens */
+    }
+
+    .contact-form label {
+        font-size: 1rem; /* Smaller font size for labels */
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        padding: 0.8rem; /* Adjust padding for inputs */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        max-width: 350px;
+    }
+    .contact-form label {
+        font-size: 0.9rem; /* Further reduce font size for mobile */
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        padding: 0.5rem; /* Further adjust padding */
+    }
+
+    .contact-form textarea {
+        height: 80px; /* Adjust textarea height for mobile */
+    }
+}

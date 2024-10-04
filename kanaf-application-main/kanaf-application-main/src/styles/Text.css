@@ -1,0 +1,18 @@
+.text {
+    font-size: 1.6rem; /* Readable paragraph size */
+    line-height: 1.6; /* Improve readability */
+    color: var(--secondary-color); /* Use secondary color */
+    margin: 1rem 0rem;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .text {
+        font-size: 1.6rem; /* Decrease paragraph size */
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 1.4rem;
+    }
+}

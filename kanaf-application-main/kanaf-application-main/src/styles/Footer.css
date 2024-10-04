@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #80bfac; 
+    --secondary-color: #004245;   
+    --third-color: #c4f8e9;
+    --fourth-color: #edfef9;
+    --white-color: #FFFFFF;  
+    --gray-color: #888;
+    --shadow: rgba(0, 66, 69, 0.2);     
+}
+
+.footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+    color: var(--white-color);
+    text-align: center;
+    padding: 1rem 6rem; /* Adjusted padding */
+    position: relative; /* For positioning elements */
+    box-shadow: 0px -5px 15px var(--shadow); /* Shadow on top */
+    margin-top: 8rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--white-color);
+    padding-bottom: 2rem;
+}
+
+.footer-container img {
+    width: 120px;
+    height: 120px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 1rem;
+    gap: .5rem;
+}
+
+/* Remove underline from links */
+.footer-links a {
+    color: var(--white-color); /* Ensure link color matches */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    position: relative; /* For pseudo-element */
+    padding: 0.2rem 0; /* Add vertical padding */
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color); /* Change color on hover */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Text shadow on hover */
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background: var(--white-color); /* Underline effect */
+    transform: scaleX(0);
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.footer-links a:hover::after {
+    transform: scaleX(1); /* Scale underline on hover */
+}
+
+/* Responsive design for footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+}
